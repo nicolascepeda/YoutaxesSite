@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTaxes - Easy Tax Filing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #ffffff;
+        }
+        .container {
+            width: 95%;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            box-shadow: none;
+        }
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #FF0402;
+            margin-bottom: 15px;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        .hero {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .hero h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 30px 20px;
+        }
+        .feature {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: none;
+            border: 1px solid #eaeaea;
+        }
+        .feature i {
+            font-size: 2em;
+            color: #FF0402;
+            margin-bottom: 15px;
+        }
+        .testimonials {
+            background-color: #ffffff;
+            padding: 30px 0;
+        }
+        .testimonial {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .cta {
+            background: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #FF0402;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e60000;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #333;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #eaeaea;
+        }
+        .social-links a {
+            color: #FF0402;
+            font-size: 1.2em;
+            margin: 0 10px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1000px;
+            }
+            header .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .logo {
+                margin-bottom: 0;
+            }
+            nav {
+                flex-direction: row;
+            }
+            nav a {
+                margin: 0 0 0 20px;
+            }
+            .hero {
+                padding: 80px 0;
+            }
+            .hero h2 {
+                font-size: 2.2em;
+            }
+            .features {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                padding: 50px 20px;
+            }
+            .feature {
+                padding: 30px;
+            }
+            .testimonials {
+                padding: 50px 0;
+            }
+            .testimonial {
+                max-width: 600px;
+            }
+            .cta {
+                padding: 80px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-calculator"></i>
+                <span>YouTaxes</span>
+            </div>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#features">Features</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#cta">Get Started</a>
+                <a href="#footer">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h2>Automated Tax Filing for Swiss Residents</h2>
+            <p>Let our smart system handle your taxes - no effort required!</p>
+            <a href="#" class="cta-button">Start Now</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature">
+            <i class="fas fa-magic"></i>
+            <h3>Simple Process</h3>
+            <p>Our smart system handles your taxes quickly and easily.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-piggy-bank"></i>
+            <h3>Save Money</h3>
+            <p>We help you find all possible ways to reduce your taxes.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Safe & Reliable</h3>
+            <p>Your information is protected, and we follow all Swiss tax rules.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="testimonial">
+                <q>YouTaxes made my taxes so much easier and found savings I didn't know about!</q>
+                <p>- John Doe, Zurich</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Want easier tax filing?</h2>
+            <p>Join thousands of happy customers who've simplified their taxes.</p>
+            <a href="#" class="cta-button">Try It Now</a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2023 YouTaxes. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

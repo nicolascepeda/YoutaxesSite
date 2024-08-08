@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Taxes - Swiss AI Tax Optimization for Everyone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F4F8;
+            color: #1A202C;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #FF0402;
+            color: white;
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 4em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #FF0402;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+        .cta-button:hover {
+            background-color: #FF3333;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+            flex-wrap: wrap;
+        }
+        .feature {
+            text-align: center;
+            max-width: 300px;
+            margin: 20px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        .feature:hover {
+            background-color: #F0F4F8;
+        }
+        .feature i {
+            font-size: 48px;
+            color: #FF0402;
+            margin-bottom: 20px;
+        }
+        .testimonial {
+            background-color: #FF0402;
+            color: white;
+            padding: 60px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .testimonial-content {
+            font-style: italic;
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-direction: column;
+            text-align: center;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 30px;
+        }
+        .benefits {
+            background-color: #E6F7FF;
+            padding: 60px 0;
+            margin-top: 80px;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .benefit-icon {
+            font-size: 24px;
+            color: #FF0402;
+            margin-right: 20px;
+        }
+        .cta-section {
+            background-color: #FF0402;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo i {
+            margin-right: 10px;
+            color: #FF0402;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            color: #1A202C;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .social-proof {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .social-proof i {
+            font-size: 30px;
+            margin: 0 15px;
+            color: #FF0402;
+        }
+        .how-it-works {
+            background-color: #F8FAFC;
+            padding: 80px 0;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        .step:hover {
+            background-color: #F0F4F8;
+        }
+        .step-number {
+            font-size: 2em;
+            font-weight: 700;
+            color: #FF0402;
+            margin-right: 20px;
+        }
+        .testimonials {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .testimonial-card {
+            flex-basis: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .testimonial-card:hover {
+            background-color: #F0F4F8;
+        }
+        .testimonial-card i {
+            font-size: 48px;
+            color: #FF0402;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">
+                <i class="fas fa-calculator"></i>
+                <span>You Taxes</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#" class="cta-button">Start Free Trial</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container hero">
+            <div class="hero-content">
+                <h1><i class="fas fa-shield-alt"></i> Simplify Your Swiss Taxes</h1>
+                <p>Harness the power of AI to optimize your taxes, save money, and stay compliant with ease.</p>
+                <a href="#" class="cta-button"><i class="fas fa-rocket"></i> Start Your 30-Day Free Trial</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="social-proof container">
+        <p>Trusted by professionals from:</p>
+        <i class="fas fa-university fa-2x" title="UBS"></i>
+        <i class="fas fa-university fa-2x" title="Credit Suisse"></i>
+        <i class="fas fa-building fa-2x" title="Zurich Insurance"></i>
+    </div>
+
+    <main>
+        <section id="features" class="container">
+            <h2>
+                <i class="fas fa-flag-checkered" style="color: #FF0402;"></i>
+                Smart Tax Management for the Digital Age
+            </h2>
+            <p>You Taxes leverages cutting-edge AI technology to revolutionize tax management for individuals and businesses in Switzerland. Our platform offers intelligent, personalized strategies to maximize your savings and ensure compliance.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Save Money</h3>
+                    <p>Our AI identifies deductions and credits you might have missed, potentially saving you thousands.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Easy to Use</h3>
+                    <p>Intuitive interface makes managing your taxes a breeze, even for beginners.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Swiss Quality</h3>
+                    <p>Benefit from Swiss precision and security standards in all our tax solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2><i class="fas fa-cogs"></i> How You Taxes Works</h2>
+                <div class="step">
+                    <i class="fas fa-upload"></i>
+                    <div>
+                        <h3>Upload Your Documents</h3>
+                        <p>Securely upload the necessary tax documents to our platform.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <i class="fas fa-brain"></i>
+                    <div>
+                        <h3>AI Analysis</h3>
+                        <p>Our advanced AI analyzes your documents to identify optimization opportunities.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3>Personalized Recommendations</h3>
+                        <p>Receive tailored strategies to minimize your tax burden and maximize savings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="container">
+            <h2><i class="fas fa-quote-left"></i> Success Stories from Our Users</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <i class="fas fa-user-circle"></i>
+                    <p>"You Taxes has completely changed how I approach my finances. The AI recommendations are spot-on!"</p>
+                    <p><strong>Alex M., Tech Entrepreneur</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-user-circle"></i>
+                    <p>"I've never felt more confident about my tax situation. It's like having a personal financial advisor!"</p>
+                    <p><strong>Sarah L., Small Business Owner</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-user-circle"></i>
+                    <p>"The time and money I've saved with You Taxes is incredible. Highly recommended for all professionals!"</p>
+                    <p><strong>Michael K., Freelance Consultant</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <h2>Why Choose You Taxes?</h2>
+                <div class="benefit-item">
+                    <i class="fas fa-file-upload benefit-icon"></i>
+                    <div>
+                        <h3>Easy Document Upload</h3>
+                        <p>Simply upload your tax documents, and our AI takes care of the rest.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-robot benefit-icon"></i>
+                    <div>
+                        <h3>AI-Powered Insights</h3>
+                        <p>Our advanced AI analyzes your financial data to provide personalized tax optimization strategies.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-clock benefit-icon"></i>
+                    <div>
+                        <h3>Save Time</h3>
+                        <p>Automate your tax preparation and spend less time worrying about finances.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-lock benefit-icon"></i>
+                    <div>
+                        <h3>Bank-Grade Security</h3>
+                        <p>Your data is protected with state-of-the-art encryption and security measures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial">
+            <div class="testimonial-content">
+                <p>"You Taxes has completely changed how I approach my finances. The AI recommendations are spot-on, and I've never felt more in control of my tax situation. It's like having a personal financial advisor in my pocket!"</p>
+                <p><strong>- Alex M., Tech Entrepreneur</strong></p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2><i class="fas fa-check-circle"></i> Optimize Your Taxes Today</h2>
+                <p>Join thousands of satisfied users who are saving time, money, and stress with You Taxes.</p>
+                <a href="#" class="cta-button"><i class="fas fa-rocket"></i> Start Your 30-Day Free Trial</a>
+                <p style="margin-top: 20px; font-size: 0.9em;">No credit card required. Cancel anytime.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 You Taxes. Empowering financial decisions with Swiss precision.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
